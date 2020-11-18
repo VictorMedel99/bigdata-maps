@@ -64,7 +64,7 @@ export class MapComponent implements AfterViewInit {
  private getEstados()
  {
   this.dataApiService.getEstados().subscribe((estados: any) => {
-    this.arrEstados = estados;
+    this.arrEstados = estados.content;
    });
  
  }
@@ -72,7 +72,7 @@ export class MapComponent implements AfterViewInit {
  private getUnidades()
  {
   this.dataApiService.getUnidades().subscribe((unidades: any) => {
-    this.arrActividades = unidades;
+    this.arrActividades =unidades.content;
    });
  
  }
@@ -96,7 +96,6 @@ export class MapComponent implements AfterViewInit {
     this.selectedMunicipio,
     this.selectedUnidad
     );
-
  }
 
  
